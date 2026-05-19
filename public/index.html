@@ -6,13 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harvard of Sales</title>
 <style>
-:root {
-  --gold:#D4A853;--gold-light:#E8C47A;--gold-dark:#B08A3E;
-  --dark:#080C14;--dark-2:#0D1220;--dark-3:#131828;--dark-4:#1A2030;--dark-5:#212840;
-  --text:#EDF2F8;--text-muted:#8FA3BC;--text-dim:#506070;
-  --border:rgba(212,168,83,0.15);--border-h:rgba(212,168,83,0.38);
-  --r:10px;--rl:16px;
-}
+:root{--gold:#D4A853;--gold-light:#E8C47A;--gold-dark:#B08A3E;--dark:#080C14;--dark-2:#0D1220;--dark-3:#131828;--dark-4:#1A2030;--dark-5:#212840;--text:#EDF2F8;--text-muted:#8FA3BC;--text-dim:#506070;--border:rgba(212,168,83,0.15);--border-h:rgba(212,168,83,0.38);--r:10px;--rl:16px;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--dark);color:var(--text);font-family:'Georgia',serif;min-height:100vh;}
 .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
@@ -66,8 +60,7 @@ textarea.text-input{resize:vertical;line-height:1.5;}
 .script-output{margin-top:1.5rem;}
 .output-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;}
 .output-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);font-family:-apple-system,sans-serif;}
-.regen-btn{font-size:11px;color:var(--text-muted);background:none;border:0.5px solid var(--border);border-radius:6px;padding:5px 12px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-family:-apple-system,sans-serif;transition:all .15s;}
-.regen-btn:hover{border-color:var(--border-h);color:var(--text);}
+.regen-btn{font-size:11px;color:var(--text-muted);background:none;border:0.5px solid var(--border);border-radius:6px;padding:5px 12px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-family:-apple-system,sans-serif;}
 .script-block{background:var(--dark-2);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;margin-bottom:12px;}
 .script-block-header{padding:10px 16px;background:var(--dark-3);border-bottom:0.5px solid var(--border);font-size:11px;letter-spacing:1.5px;color:var(--gold);font-family:-apple-system,sans-serif;text-transform:uppercase;}
 .script-block-body{padding:14px 16px;display:flex;flex-direction:column;gap:12px;}
@@ -104,11 +97,7 @@ textarea.text-input{resize:vertical;line-height:1.5;}
 .pers-score-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;font-family:-apple-system,sans-serif;}
 .pers-dots{display:flex;gap:5px;}
 .pers-dot{width:10px;height:10px;border-radius:50%;background:var(--dark-5);transition:all .3s;}
-.pers-dot.active-1{background:#C8503C;}
-.pers-dot.active-2{background:#C88030;}
-.pers-dot.active-3{background:#C8A830;}
-.pers-dot.active-4{background:#80B830;}
-.pers-dot.active-5{background:#40B860;}
+.pers-dot.active-1{background:#C8503C;}.pers-dot.active-2{background:#C88030;}.pers-dot.active-3{background:#C8A830;}.pers-dot.active-4{background:#80B830;}.pers-dot.active-5{background:#40B860;}
 .pers-hint{font-size:12px;color:var(--text-dim);font-family:-apple-system,sans-serif;margin-top:6px;line-height:1.5;min-height:18px;}
 @media(max-width:600px){.content{padding:1rem;}.nav-tabs{padding:0 1rem;overflow-x:auto;}.option-grid,.option-grid-3{grid-template-columns:1fr 1fr;}.header{padding:0 1rem;}.obj-row{flex-direction:column;}}
 </style>
@@ -122,9 +111,9 @@ textarea.text-input{resize:vertical;line-height:1.5;}
       <div class="logo-sub">The Psychology of MLM Excellence</div>
     </div>
     <div class="fg"><label class="sans" id="lbl-email">Email</label><input type="email" id="login-email" placeholder="email@exemplu.com"></div>
-    <div class="fg"><label class="sans" id="lbl-pass">Parolă</label><input type="password" id="login-pass" placeholder="••••••••"></div>
-    <button class="btn-primary sans" onclick="doLogin()" id="btn-login">Intră în platformă</button>
-    <div class="login-hint sans" id="login-hint">Versiune demo — orice credențiale funcționează</div>
+    <div class="fg"><label class="sans" id="lbl-pass">Parola</label><input type="password" id="login-pass" placeholder="••••••••"></div>
+    <button class="btn-primary sans" onclick="doLogin()" id="btn-login">Intra in platforma</button>
+    <div class="login-hint sans" id="login-hint">Versiune demo - orice credentiale functioneaza</div>
   </div>
 </div>
 <div id="app-screen">
@@ -135,18 +124,18 @@ textarea.text-input{resize:vertical;line-height:1.5;}
         <button class="lang-btn active sans" onclick="setLang('ro')">RO</button>
         <button class="lang-btn sans" onclick="setLang('en')">EN</button>
       </div>
-      <button class="logout-btn sans" onclick="doLogout()" id="btn-logout">Ieșire</button>
+      <button class="logout-btn sans" onclick="doLogout()" id="btn-logout">Iesire</button>
     </div>
   </div>
   <div class="nav-tabs">
-    <button class="nav-tab active sans" onclick="setTab('invitatie')" id="tab-invitatie">Invitație</button>
+    <button class="nav-tab active sans" onclick="setTab('invitatie')" id="tab-invitatie">Invitatie</button>
     <button class="nav-tab locked sans" id="tab-preconectare">Pre-conectare</button>
-    <button class="nav-tab locked sans" id="tab-inchidere">Închidere</button>
+    <button class="nav-tab locked sans" id="tab-inchidere">Inchidere</button>
     <button class="nav-tab locked sans" id="tab-followup">Follow-up</button>
   </div>
   <div class="content">
     <div id="panel-invitatie">
-      <div class="section-title sans" id="gen-title">Generator script — invitație telefonică</div>
+      <div class="section-title sans" id="gen-title">Generator script - invitatie telefonica</div>
       <div class="param-card">
         <span class="param-label" id="lbl-agent-gen">Eu sunt</span>
         <div class="option-grid" id="agent-gen-grid"></div>
@@ -154,21 +143,21 @@ textarea.text-input{resize:vertical;line-height:1.5;}
         <div class="option-grid" id="client-gen-grid"></div>
       </div>
       <div class="param-card">
-        <span class="param-label" id="lbl-rel">Tipul relației</span>
+        <span class="param-label" id="lbl-rel">Tipul relatiei</span>
         <div class="option-grid" id="rel-grid"></div>
         <div id="subfields-container"></div>
         <div id="screenshot-wrap" style="display:none;margin-top:14px;padding-top:14px;border-top:0.5px solid var(--border);">
-          <span class="param-sublabel sans" id="lbl-screenshot">Screenshot profil social media (opțional)</span>
+          <span class="param-sublabel sans" id="lbl-screenshot">Screenshot profil social media (optional)</span>
           <div id="upload-area" onclick="document.getElementById('screenshot-input').click()" style="border:1px dashed var(--border-h);border-radius:10px;padding:20px;text-align:center;cursor:pointer;background:var(--dark-3);">
             <div id="upload-placeholder">
               <div style="font-size:24px;margin-bottom:8px;">📷</div>
-              <div class="sans" style="font-size:13px;color:var(--text-muted);" id="upload-hint">Click pentru a încărca screenshot-ul profilului</div>
+              <div class="sans" style="font-size:13px;color:var(--text-muted);" id="upload-hint">Click pentru a incarca screenshot-ul profilului</div>
               <div class="sans" style="font-size:11px;color:var(--text-dim);margin-top:4px;">Instagram, Facebook, TikTok, LinkedIn</div>
             </div>
             <img id="screenshot-preview" style="display:none;max-width:100%;max-height:200px;border-radius:8px;margin:0 auto;" />
           </div>
           <input type="file" id="screenshot-input" accept="image/*" style="display:none;" onchange="handleScreenshot(event)">
-          <button id="remove-screenshot" onclick="removeScreenshot()" style="display:none;margin-top:8px;background:none;border:0.5px solid var(--border);border-radius:6px;padding:5px 12px;color:var(--text-muted);font-size:11px;cursor:pointer;font-family:-apple-system,sans-serif;">✕ Elimină</button>
+          <button id="remove-screenshot" onclick="removeScreenshot()" style="display:none;margin-top:8px;background:none;border:0.5px solid var(--border);border-radius:6px;padding:5px 12px;color:var(--text-muted);font-size:11px;cursor:pointer;font-family:-apple-system,sans-serif;">X Elimina</button>
         </div>
         <div class="pers-score" id="pers-score-wrap" style="display:none;">
           <div class="pers-score-label">
@@ -183,164 +172,183 @@ textarea.text-input{resize:vertical;line-height:1.5;}
         </div>
       </div>
       <div class="param-card">
-        <span class="param-label" id="lbl-prod">Produsul / serviciul tău</span>
+        <span class="param-label" id="lbl-prod">Produsul / serviciul tau</span>
         <input class="text-input sans" type="text" id="input-produs" placeholder="">
       </div>
       <div class="param-card">
         <span class="param-label" id="lbl-used">Ai folosit personal produsul?</span>
         <div class="option-grid" id="used-grid"></div>
         <div id="used-detail-wrap" style="display:none;margin-top:12px;">
-          <span class="param-label" id="lbl-used-detail">Descrie experiența ta cu produsul</span>
+          <span class="param-label" id="lbl-used-detail">Descrie experienta ta cu produsul</span>
           <textarea class="text-input sans" id="input-used-detail" rows="3" placeholder=""></textarea>
         </div>
       </div>
       <div class="param-card">
-        <span class="param-label" id="lbl-int">Intenția apelului</span>
+        <span class="param-label" id="lbl-int">Intentia apelului</span>
         <div class="option-grid" id="int-grid"></div>
       </div>
       <div class="param-card">
-        <span class="param-label" id="lbl-prez">Tipul prezentării</span>
+        <span class="param-label" id="lbl-prez">Tipul prezentarii</span>
         <div class="option-grid" id="prez-grid"></div>
       </div>
-      <button class="generate-btn sans" id="gen-btn" onclick="generateScript()" disabled><span id="gen-btn-text">Generează script</span></button>
+      <button class="generate-btn sans" id="gen-btn" onclick="generateScript()" disabled><span id="gen-btn-text">Genereaza script</span></button>
       <div id="loader" style="display:none"><div class="loader"><div class="spinner"></div><div class="loader-text sans" id="loader-msg"></div></div></div>
       <div id="error-box" style="display:none" class="error-box sans"></div>
       <div id="script-output" style="display:none" class="script-output">
         <div class="output-header">
           <div class="output-title sans" id="out-title">Script generat</div>
-          <button class="regen-btn sans" onclick="generateScript()" id="regen-btn">↺ Regenerează</button>
+          <button class="regen-btn sans" onclick="generateScript()" id="regen-btn">Regenereaza</button>
         </div>
         <div id="script-blocks"></div>
         <div class="objection-section">
-          <div class="obj-title sans" id="obj-title">A apărut o obiecție în timpul apelului?</div>
+          <div class="obj-title sans" id="obj-title">A aparut o obiectie in timpul apelului?</div>
           <div class="obj-row">
             <input class="text-input sans" type="text" id="obj-input" placeholder="">
-            <button class="obj-btn sans" id="obj-btn" onclick="generateObjection()" disabled>Generează răspuns</button>
+            <button class="obj-btn sans" id="obj-btn" onclick="generateObjection()" disabled>Genereaza raspuns</button>
           </div>
         </div>
         <div id="obj-loader" style="display:none"><div class="loader"><div class="spinner"></div><div class="loader-text sans" id="obj-loader-msg"></div></div></div>
         <div id="obj-error" style="display:none" class="error-box sans"></div>
         <div id="obj-output" style="display:none" class="script-output">
-          <div class="output-header"><div class="output-title sans" id="obj-out-title">Răspuns la obiecție</div></div>
+          <div class="output-header"><div class="output-title sans" id="obj-out-title">Raspuns la obiectie</div></div>
           <div id="obj-blocks"></div>
         </div>
       </div>
     </div>
-    <div id="panel-preconectare" style="display:none"><div class="coming-soon"><div class="coming-soon-icon">◈</div><h3 id="cs1-title">Pre-conectare</h3><p class="sans" id="cs1-text">Această secțiune va fi disponibilă în curând.</p></div></div>
-    <div id="panel-inchidere" style="display:none"><div class="coming-soon"><div class="coming-soon-icon">◈</div><h3 id="cs2-title">Închidere</h3><p class="sans" id="cs2-text">Această secțiune va fi disponibilă în curând.</p></div></div>
-    <div id="panel-followup" style="display:none"><div class="coming-soon"><div class="coming-soon-icon">◈</div><h3 id="cs3-title">Follow-up</h3><p class="sans" id="cs3-text">Această secțiune va fi disponibilă în curând.</p></div></div>
+    <div id="panel-preconectare" style="display:none"><div class="coming-soon"><div class="coming-soon-icon">◈</div><h3>Pre-conectare</h3><p class="sans">Aceasta sectiune va fi disponibila in curand.</p></div></div>
+    <div id="panel-inchidere" style="display:none"><div class="coming-soon"><div class="coming-soon-icon">◈</div><h3>Inchidere</h3><p class="sans">Aceasta sectiune va fi disponibila in curand.</p></div></div>
+    <div id="panel-followup" style="display:none"><div class="coming-soon"><div class="coming-soon-icon">◈</div><h3>Follow-up</h3><p class="sans">Aceasta sectiune va fi disponibila in curand.</p></div></div>
   </div>
 </div>
 <script>
-const API_URL = '/api/generate';
+var API_URL = '/api/generate';
+var lang = 'ro';
+var selRel = '';
+var selInt = '';
+var selUsed = '';
+var selPrez = '';
+var selAgentGen = '';
+var selClientGen = '';
+var subValues = {};
+var loaderTimer = null;
+var screenshotBase64 = null;
+var annId = 0;
 
-const T = {
-  ro:{
-    lbl_email:"Email",lbl_pass:"Parolă",btn_login:"Intră în platformă",login_hint:"Versiune demo — orice credențiale funcționează",btn_logout:"Ieșire",
-    tab_inv:"Invitație",tab_pre:"Pre-conectare",tab_inc:"Închidere",tab_fol:"Follow-up",
-    gen_title:"Generator script — invitație telefonică",
-    lbl_agent_gen:"Eu sunt",lbl_client_gen:"Persoana pe care o sun este",
-    gen_opts:[["barbat","Bărbat"],["femeie","Femeie"]],
-    lbl_rel:"Tipul relației",lbl_prod:"Produsul / serviciul tău",lbl_int:"Intenția apelului",lbl_prez:"Tipul prezentării",
-    lbl_used:"Ai folosit personal produsul?",lbl_used_detail:"Descrie experiența ta cu produsul",
+var T = {
+  ro: {
+    lbl_email:"Email", lbl_pass:"Parola", btn_login:"Intra in platforma",
+    login_hint:"Versiune demo - orice credentiale functioneaza", btn_logout:"Iesire",
+    tab_inv:"Invitatie", tab_pre:"Pre-conectare", tab_inc:"Inchidere", tab_fol:"Follow-up",
+    gen_title:"Generator script - invitatie telefonica",
+    lbl_agent_gen:"Eu sunt", lbl_client_gen:"Persoana pe care o sun este",
+    gen_opts:[["barbat","Barbat"],["femeie","Femeie"]],
+    lbl_rel:"Tipul relatiei", lbl_prod:"Produsul / serviciul tau",
+    lbl_int:"Intentia apelului", lbl_prez:"Tipul prezentarii",
+    lbl_used:"Ai folosit personal produsul?",
+    lbl_used_detail:"Descrie experienta ta cu produsul",
     prod_ph:"ex: cosmetice made in Italy, suplimente, croaziere...",
     used_ph:"ex: Am folosit crema 11 zile, pielea s-a schimbat vizibil...",
-    lbl_screenshot:"Screenshot profil social media (opțional)",
-    upload_hint:"Click pentru a încărca screenshot-ul profilului",
-    upload_done:"Screenshot încărcat ✓",
-    rel_opts:[["prieten_apropiat","Prieten apropiat"],["cunostinta","Cunoștință"],["social_media","Conexiune Social Media"],["prieten_vechi","Prieten vechi"]],
-    int_opts:[["recrutare","Recrutare în echipă"],["vanzare","Vânzare produs"]],
-    used_opts:[["da","Da, am folosit"],["nu","Nu încă"]],
-    prez_opts:[["fizica","Fizică — în persoană"],["online","Online — Zoom / Video"]],
-    gen_btn:"Generează script",gen_btn_loading:"Se generează...",
-    out_title:"Script generat",regen:"↺ Regenerează",
-    obj_title:"A apărut o obiecție în timpul apelului?",
-    obj_ph:"Scrie exact ce a spus clientul...",obj_btn:"Generează răspuns",obj_out_title:"Răspuns la obiecție",
-    loader_msgs:["Analizez psihologia apelului...","Construiesc scriptul...","Adaug tonalitate și pauze...","Finalizez arhitectura..."],
-    obj_loader_msgs:["Analizez obiecția...","Construiesc răspunsul...","Aplic tehnica Chris Voss..."],
+    lbl_screenshot:"Screenshot profil social media (optional)",
+    upload_hint:"Click pentru a incarca screenshot-ul profilului",
+    upload_done:"Screenshot incarcat",
+    rel_opts:[["prieten_apropiat","Prieten apropiat"],["cunostinta","Cunostinta"],["social_media","Conexiune Social Media"],["prieten_vechi","Prieten vechi"]],
+    int_opts:[["recrutare","Recrutare in echipa"],["vanzare","Vanzare produs"]],
+    used_opts:[["da","Da, am folosit"],["nu","Nu inca"]],
+    prez_opts:[["fizica","Fizica - in persoana"],["online","Online - Zoom / Video"]],
+    gen_btn:"Genereaza script", gen_btn_loading:"Se genereaza...",
+    out_title:"Script generat", regen:"Regenereaza",
+    obj_title:"A aparut o obiectie in timpul apelului?",
+    obj_ph:"Scrie exact ce a spus clientul...",
+    obj_btn:"Genereaza raspuns", obj_out_title:"Raspuns la obiectie",
+    loader_msgs:["Analizez psihologia apelului...","Construiesc scriptul...","Adaug tonalitate si pauze...","Finalizez arhitectura..."],
+    obj_loader_msgs:["Analizez obiectia...","Construiesc raspunsul...","Aplic tehnica Chris Voss..."],
     pers_label:"Nivel personalizare",
-    pers_hints:["Adaugă detalii pentru un script personalizat","Script de bază — adaugă mai multe detalii","Script moderat personalizat","Script bine personalizat","Script complet personalizat ✓"],
-    badge_agent:"Agent",badge_client:"Client",
-    psi_label:"🧠 Psihologie",ton_label:"🎙 Tonalitate",pau_label:"⏸ Pauză",
-    error_msg:"A apărut o eroare. Verifică conexiunea și încearcă din nou.",
-    sub:{
-      prieten_apropiat:{
-        de_cand:{type:"select",label:"De cât timp vă cunoașteți?",opts:["Mai puțin de 1 an","1–3 ani","3–10 ani","Peste 10 ani"]},
-        stie_mlm:{type:"select",label:"Știe că dezvolți un MLM?",opts:["Nu știe nimic","Bănuiește ceva","Știe și este deschis","Știe și este sceptic"]},
-        pasiune:{type:"text",label:"Care este cel mai mare interes / pasiune al lui?",ph:"ex: fitness, călătorii, antreprenoriat..."},
-        ultima_interactiune:{type:"select",label:"Când ați vorbit ultima dată?",opts:["Săptămâna aceasta","Luna aceasta","Acum 1–3 luni","Acum mai mult de 3 luni"]}
+    pers_hints:["Adauga detalii pentru un script personalizat","Script de baza - adauga mai multe detalii","Script moderat personalizat","Script bine personalizat","Script complet personalizat"],
+    badge_agent:"Agent", badge_client:"Client",
+    psi_label:"Psihologie", ton_label:"Tonalitate", pau_label:"Pauza",
+    error_msg:"A aparut o eroare. Verifica conexiunea si incearca din nou.",
+    sub: {
+      prieten_apropiat: {
+        de_cand:{type:"select",label:"De cat timp va cunoasteti?",opts:["Mai putin de 1 an","1-3 ani","3-10 ani","Peste 10 ani"]},
+        stie_mlm:{type:"select",label:"Stie ca dezvolti un MLM?",opts:["Nu stie nimic","Banuieste ceva","Stie si este deschis","Stie si este sceptic"]},
+        pasiune:{type:"text",label:"Care este cel mai mare interes / pasiune al lui?",ph:"ex: fitness, calatorii, antreprenoriat..."},
+        ultima_interactiune:{type:"select",label:"Cand ati vorbit ultima data?",opts:["Saptamana aceasta","Luna aceasta","Acum 1-3 luni","Acum mai mult de 3 luni"]}
       },
-      cunostinta:{
-        cum_v_ati_cunoscut:{type:"text",label:"Cum v-ați cunoscut?",ph:"ex: colegi de muncă, eveniment, școală..."},
-        frecventa:{type:"select",label:"Cât de des interacționați?",opts:["Rar / aproape deloc","Ocazional","Regulat"]},
-        stie_mlm:{type:"select",label:"Știe că dezvolți un MLM?",opts:["Nu știe nimic","Bănuiește ceva","Știe și este deschis","Știe și este sceptic"]},
-        statut:{type:"select",label:"Are el un business sau este angajat?",opts:["Angajat","Antreprenor","Freelancer","Nu știu"]}
+      cunostinta: {
+        cum_v_ati_cunoscut:{type:"text",label:"Cum v-ati cunoscut?",ph:"ex: colegi de munca, eveniment, scoala..."},
+        frecventa:{type:"select",label:"Cat de des interactionati?",opts:["Rar / aproape deloc","Ocazional","Regulat"]},
+        stie_mlm:{type:"select",label:"Stie ca dezvolti un MLM?",opts:["Nu stie nimic","Banuieste ceva","Stie si este deschis","Stie si este sceptic"]},
+        statut:{type:"select",label:"Are el un business sau este angajat?",opts:["Angajat","Antreprenor","Freelancer","Nu stiu"]}
       },
-      social_media:{
-        platforma:{type:"select",label:"Pe ce platformă interacționați?",opts:["Instagram","Facebook","TikTok","LinkedIn","Alta"]},
-        interactiune:{type:"select",label:"Ce tip de interacțiune a avut cu tine?",opts:["Like la postare","Comentariu la postare","Reply la story","DM / mesaj direct","Urmăritor fără interacțiune"]},
-        ce_a_spus:{type:"text",label:"Ce anume a comentat / spus despre tine sau conținutul tău?",ph:"ex: mi-a spus că îi place că eu călătoresc..."},
-        detalii_profil:{type:"text",label:"Ce știi despre el din profilul lui?",ph:"ex: antreprenor, pasionat de fitness, călătorește des..."},
-        stie_mlm:{type:"select",label:"Știe că dezvolți un MLM?",opts:["Nu știe nimic","Bănuiește ceva","Știe și este deschis","Știe și este sceptic"]}
+      social_media: {
+        platforma:{type:"select",label:"Pe ce platforma interactionati?",opts:["Instagram","Facebook","TikTok","LinkedIn","Alta"]},
+        interactiune:{type:"select",label:"Ce tip de interactiune a avut cu tine?",opts:["Like la postare","Comentariu la postare","Reply la story","DM / mesaj direct","Urmator fara interactiune"]},
+        ce_a_spus:{type:"text",label:"Ce anume a comentat / spus despre tine sau continutul tau?",ph:"ex: mi-a spus ca ii place ca eu calatoresc..."},
+        detalii_profil:{type:"text",label:"Ce stii despre el din profilul lui?",ph:"ex: antreprenor, pasionat de fitness, calatoreste des..."},
+        stie_mlm:{type:"select",label:"Stie ca dezvolti un MLM?",opts:["Nu stie nimic","Banuieste ceva","Stie si este deschis","Stie si este sceptic"]}
       },
-      prieten_vechi:{
-        timp_nev:{type:"select",label:"De cât timp nu ați mai vorbit?",opts:["6 luni – 1 an","1–3 ani","3–5 ani","Peste 5 ani"]},
-        natura_rel:{type:"text",label:"Care era natura relației?",ph:"ex: colegi de școală, vecini, foști colegi..."},
-        stie_mlm:{type:"select",label:"Știe că dezvolți un MLM?",opts:["Nu știe nimic","Bănuiește ceva","Știe și este deschis","Știe și este sceptic"]},
-        motiv_natural:{type:"text",label:"Ai un motiv natural de a-l suna? (opțional)",ph:"ex: aniversare, eveniment recent..."}
+      prieten_vechi: {
+        timp_nev:{type:"select",label:"De cat timp nu ati mai vorbit?",opts:["6 luni - 1 an","1-3 ani","3-5 ani","Peste 5 ani"]},
+        natura_rel:{type:"text",label:"Care era natura relatiei?",ph:"ex: colegi de scoala, vecini, fosti colegi..."},
+        stie_mlm:{type:"select",label:"Stie ca dezvolti un MLM?",opts:["Nu stie nimic","Banuieste ceva","Stie si este deschis","Stie si este sceptic"]},
+        motiv_natural:{type:"text",label:"Ai un motiv natural de a-l suna? (optional)",ph:"ex: aniversare, eveniment recent..."}
       }
     }
   },
-  en:{
-    lbl_email:"Email",lbl_pass:"Password",btn_login:"Enter Platform",login_hint:"Demo version — any credentials work",btn_logout:"Sign out",
-    tab_inv:"Invitation",tab_pre:"Pre-connect",tab_inc:"Closing",tab_fol:"Follow-up",
-    gen_title:"Script generator — phone invitation",
-    lbl_agent_gen:"I am",lbl_client_gen:"The person I am calling is",
+  en: {
+    lbl_email:"Email", lbl_pass:"Password", btn_login:"Enter Platform",
+    login_hint:"Demo version - any credentials work", btn_logout:"Sign out",
+    tab_inv:"Invitation", tab_pre:"Pre-connect", tab_inc:"Closing", tab_fol:"Follow-up",
+    gen_title:"Script generator - phone invitation",
+    lbl_agent_gen:"I am", lbl_client_gen:"The person I am calling is",
     gen_opts:[["barbat","Male"],["femeie","Female"]],
-    lbl_rel:"Relationship type",lbl_prod:"Your product / service",lbl_int:"Call intention",lbl_prez:"Presentation type",
-    lbl_used:"Have you personally used the product?",lbl_used_detail:"Describe your experience with the product",
+    lbl_rel:"Relationship type", lbl_prod:"Your product / service",
+    lbl_int:"Call intention", lbl_prez:"Presentation type",
+    lbl_used:"Have you personally used the product?",
+    lbl_used_detail:"Describe your experience with the product",
     prod_ph:"e.g.: luxury cosmetics, supplements, cruises...",
     used_ph:"e.g.: I used the cream for 11 days, my skin visibly changed...",
     lbl_screenshot:"Social media profile screenshot (optional)",
     upload_hint:"Click to upload profile screenshot",
-    upload_done:"Screenshot uploaded ✓",
+    upload_done:"Screenshot uploaded",
     rel_opts:[["prieten_apropiat","Close friend"],["cunostinta","Acquaintance"],["social_media","Social Media Connection"],["prieten_vechi","Old friend"]],
     int_opts:[["recrutare","Team recruitment"],["vanzare","Product sale"]],
     used_opts:[["da","Yes, I have used it"],["nu","Not yet"]],
-    prez_opts:[["fizica","In person — physical meeting"],["online","Online — Zoom / Video call"]],
-    gen_btn:"Generate script",gen_btn_loading:"Generating...",
-    out_title:"Generated script",regen:"↺ Regenerate",
+    prez_opts:[["fizica","In person - physical meeting"],["online","Online - Zoom / Video call"]],
+    gen_btn:"Generate script", gen_btn_loading:"Generating...",
+    out_title:"Generated script", regen:"Regenerate",
     obj_title:"Did an objection come up during the call?",
-    obj_ph:"Write exactly what the client said...",obj_btn:"Generate response",obj_out_title:"Objection response",
+    obj_ph:"Write exactly what the client said...",
+    obj_btn:"Generate response", obj_out_title:"Objection response",
     loader_msgs:["Analyzing call psychology...","Building the script...","Adding tonality and pauses...","Finalizing architecture..."],
     obj_loader_msgs:["Analyzing objection...","Building response...","Applying Chris Voss technique..."],
     pers_label:"Personalization level",
-    pers_hints:["Add client details for a personalized script","Basic script — add more details","Moderately personalized script","Well personalized script","Fully personalized script ✓"],
-    badge_agent:"Agent",badge_client:"Client",
-    psi_label:"🧠 Psychology",ton_label:"🎙 Tonality",pau_label:"⏸ Pause",
+    pers_hints:["Add client details for a personalized script","Basic script - add more details","Moderately personalized script","Well personalized script","Fully personalized script"],
+    badge_agent:"Agent", badge_client:"Client",
+    psi_label:"Psychology", ton_label:"Tonality", pau_label:"Pause",
     error_msg:"An error occurred. Check your connection and try again.",
-    sub:{
-      prieten_apropiat:{
-        de_cand:{type:"select",label:"How long have you known each other?",opts:["Less than 1 year","1–3 years","3–10 years","Over 10 years"]},
+    sub: {
+      prieten_apropiat: {
+        de_cand:{type:"select",label:"How long have you known each other?",opts:["Less than 1 year","1-3 years","3-10 years","Over 10 years"]},
         stie_mlm:{type:"select",label:"Do they know you're building an MLM?",opts:["No idea","Suspects something","Knows and is open","Knows and is skeptical"]},
         pasiune:{type:"text",label:"What is their biggest interest / passion?",ph:"e.g.: fitness, travel, entrepreneurship..."},
-        ultima_interactiune:{type:"select",label:"When did you last talk?",opts:["This week","This month","1–3 months ago","More than 3 months ago"]}
+        ultima_interactiune:{type:"select",label:"When did you last talk?",opts:["This week","This month","1-3 months ago","More than 3 months ago"]}
       },
-      cunostinta:{
+      cunostinta: {
         cum_v_ati_cunoscut:{type:"text",label:"How did you meet?",ph:"e.g.: coworkers, event, school..."},
         frecventa:{type:"select",label:"How often do you interact?",opts:["Rarely","Occasionally","Regularly"]},
         stie_mlm:{type:"select",label:"Do they know you're building an MLM?",opts:["No idea","Suspects something","Knows and is open","Knows and is skeptical"]},
         statut:{type:"select",label:"Do they have a business or are they employed?",opts:["Employed","Entrepreneur","Freelancer","I don't know"]}
       },
-      social_media:{
+      social_media: {
         platforma:{type:"select",label:"Which platform?",opts:["Instagram","Facebook","TikTok","LinkedIn","Other"]},
         interactiune:{type:"select",label:"What type of interaction did they have with you?",opts:["Liked a post","Commented on a post","Replied to a story","DM / direct message","Follower with no interaction"]},
         ce_a_spus:{type:"text",label:"What did they say about you or your content?",ph:"e.g.: said they love that I travel..."},
         detalii_profil:{type:"text",label:"What do you know about them from their profile?",ph:"e.g.: entrepreneur, fitness enthusiast, travels often..."},
         stie_mlm:{type:"select",label:"Do they know you're building an MLM?",opts:["No idea","Suspects something","Knows and is open","Knows and is skeptical"]}
       },
-      prieten_vechi:{
-        timp_nev:{type:"select",label:"How long since you last talked?",opts:["6 months – 1 year","1–3 years","3–5 years","Over 5 years"]},
+      prieten_vechi: {
+        timp_nev:{type:"select",label:"How long since you last talked?",opts:["6 months - 1 year","1-3 years","3-5 years","Over 5 years"]},
         natura_rel:{type:"text",label:"What was the nature of the relationship?",ph:"e.g.: school friends, neighbors, former coworkers..."},
         stie_mlm:{type:"select",label:"Do they know you're building an MLM?",opts:["No idea","Suspects something","Knows and is open","Knows and is skeptical"]},
         motiv_natural:{type:"text",label:"Do you have a natural reason to call? (optional)",ph:"e.g.: shared anniversary, recent event..."}
@@ -349,106 +357,136 @@ const T = {
   }
 };
 
-let lang='ro',selRel='',selInt='',selUsed='',selPrez='',selAgentGen='',selClientGen='',subValues={},loaderTimer=null,screenshotBase64=null;
+function doLogin() {
+  var e = document.getElementById('login-email').value.trim();
+  var p = document.getElementById('login-pass').value.trim();
+  if (!e || !p) return;
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app-screen').style.display = 'block';
+}
 
-function t(k){return T[lang][k]||k;}
-function setLang(l){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().toLowerCase()===l));applyLang();}
+function doLogout() {
+  document.getElementById('app-screen').style.display = 'none';
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('script-output').style.display = 'none';
+  document.getElementById('obj-output').style.display = 'none';
+}
 
-function applyLang(){
-  const L=T[lang];
-  document.getElementById('lbl-email').textContent=L.lbl_email;
-  document.getElementById('lbl-pass').textContent=L.lbl_pass;
-  document.getElementById('btn-login').textContent=L.btn_login;
-  document.getElementById('login-hint').textContent=L.login_hint;
-  document.getElementById('btn-logout').textContent=L.btn_logout;
-  document.getElementById('tab-invitatie').textContent=L.tab_inv;
-  document.getElementById('tab-preconectare').textContent=L.tab_pre;
-  document.getElementById('tab-inchidere').textContent=L.tab_inc;
-  document.getElementById('tab-followup').textContent=L.tab_fol;
-  document.getElementById('gen-title').textContent=L.gen_title;
-  document.getElementById('lbl-agent-gen').textContent=L.lbl_agent_gen;
-  document.getElementById('lbl-client-gen').textContent=L.lbl_client_gen;
-  document.getElementById('lbl-rel').textContent=L.lbl_rel;
-  document.getElementById('lbl-prod').textContent=L.lbl_prod;
-  document.getElementById('lbl-int').textContent=L.lbl_int;
-  document.getElementById('lbl-prez').textContent=L.lbl_prez;
-  document.getElementById('lbl-used').textContent=L.lbl_used;
-  document.getElementById('lbl-used-detail').textContent=L.lbl_used_detail;
-  document.getElementById('input-used-detail').placeholder=L.used_ph;
-  document.getElementById('input-produs').placeholder=L.prod_ph;
-  document.getElementById('lbl-screenshot').textContent=L.lbl_screenshot;
-  document.getElementById('upload-hint').textContent=screenshotBase64?L.upload_done:L.upload_hint;
-  document.getElementById('obj-title').textContent=L.obj_title;
-  document.getElementById('obj-input').placeholder=L.obj_ph;
-  document.getElementById('obj-btn').textContent=L.obj_btn;
-  document.getElementById('out-title').textContent=L.out_title;
-  document.getElementById('regen-btn').textContent=L.regen;
-  document.getElementById('obj-out-title').textContent=L.obj_out_title;
-  const gbt=document.getElementById('gen-btn-text');
-  if(!gbt.dataset.loading)gbt.textContent=L.gen_btn;
-  buildGenderGrids();buildRelGrid();buildOtherGrids();
-  if(selRel)buildSubfields(selRel);
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.textContent.trim().toLowerCase() === l);
+  });
+  applyLang();
+}
+
+function applyLang() {
+  var L = T[lang];
+  document.getElementById('lbl-email').textContent = L.lbl_email;
+  document.getElementById('lbl-pass').textContent = L.lbl_pass;
+  document.getElementById('btn-login').textContent = L.btn_login;
+  document.getElementById('login-hint').textContent = L.login_hint;
+  document.getElementById('btn-logout').textContent = L.btn_logout;
+  document.getElementById('tab-invitatie').textContent = L.tab_inv;
+  document.getElementById('tab-preconectare').textContent = L.tab_pre;
+  document.getElementById('tab-inchidere').textContent = L.tab_inc;
+  document.getElementById('tab-followup').textContent = L.tab_fol;
+  document.getElementById('gen-title').textContent = L.gen_title;
+  document.getElementById('lbl-agent-gen').textContent = L.lbl_agent_gen;
+  document.getElementById('lbl-client-gen').textContent = L.lbl_client_gen;
+  document.getElementById('lbl-rel').textContent = L.lbl_rel;
+  document.getElementById('lbl-prod').textContent = L.lbl_prod;
+  document.getElementById('lbl-int').textContent = L.lbl_int;
+  document.getElementById('lbl-prez').textContent = L.lbl_prez;
+  document.getElementById('lbl-used').textContent = L.lbl_used;
+  document.getElementById('lbl-used-detail').textContent = L.lbl_used_detail;
+  document.getElementById('input-used-detail').placeholder = L.used_ph;
+  document.getElementById('input-produs').placeholder = L.prod_ph;
+  document.getElementById('lbl-screenshot').textContent = L.lbl_screenshot;
+  document.getElementById('upload-hint').textContent = screenshotBase64 ? L.upload_done : L.upload_hint;
+  document.getElementById('obj-title').textContent = L.obj_title;
+  document.getElementById('obj-input').placeholder = L.obj_ph;
+  document.getElementById('obj-btn').textContent = L.obj_btn;
+  document.getElementById('out-title').textContent = L.out_title;
+  document.getElementById('regen-btn').textContent = L.regen;
+  document.getElementById('obj-out-title').textContent = L.obj_out_title;
+  var gbt = document.getElementById('gen-btn-text');
+  if (!gbt.dataset.loading) gbt.textContent = L.gen_btn;
+  buildGenderGrids();
+  buildRelGrid();
+  buildOtherGrids();
+  if (selRel) buildSubfields(selRel);
   updatePersScore();
 }
 
-function buildGenderGrids(){
-  const L=T[lang];
-  ['agent','client'].forEach(who=>{
-    const g=document.getElementById(who+'-gen-grid');
-    g.innerHTML='';
-    L.gen_opts.forEach(([v,label])=>{
-      const b=document.createElement('button');
-      const sel=who==='agent'?selAgentGen:selClientGen;
-      b.className='option-btn sans'+(sel===v?' selected':'');
-      b.textContent=label;
-      b.onclick=()=>{if(who==='agent')selAgentGen=v;else selClientGen=v;buildGenderGrids();checkReady();};
+function buildGenderGrids() {
+  var L = T[lang];
+  ['agent','client'].forEach(function(who) {
+    var g = document.getElementById(who + '-gen-grid');
+    g.innerHTML = '';
+    L.gen_opts.forEach(function(item) {
+      var v = item[0], label = item[1];
+      var b = document.createElement('button');
+      var sel = who === 'agent' ? selAgentGen : selClientGen;
+      b.className = 'option-btn sans' + (sel === v ? ' selected' : '');
+      b.textContent = label;
+      b.onclick = function() {
+        if (who === 'agent') selAgentGen = v; else selClientGen = v;
+        buildGenderGrids(); checkReady();
+      };
       g.appendChild(b);
     });
   });
 }
 
-function buildRelGrid(){
-  const L=T[lang];
-  const g=document.getElementById('rel-grid');
-  g.innerHTML='';
-  L.rel_opts.forEach(([v,label])=>{
-    const b=document.createElement('button');
-    b.className='option-btn sans'+(selRel===v?' selected':'');
-    b.textContent=label;
-    b.onclick=()=>{selRel=v;subValues={};document.getElementById('screenshot-wrap').style.display='block';buildRelGrid();buildSubfields(v);checkReady();updatePersScore();};
+function buildRelGrid() {
+  var L = T[lang];
+  var g = document.getElementById('rel-grid');
+  g.innerHTML = '';
+  L.rel_opts.forEach(function(item) {
+    var v = item[0], label = item[1];
+    var b = document.createElement('button');
+    b.className = 'option-btn sans' + (selRel === v ? ' selected' : '');
+    b.textContent = label;
+    b.onclick = function() {
+      selRel = v; subValues = {};
+      document.getElementById('screenshot-wrap').style.display = 'block';
+      buildRelGrid(); buildSubfields(v); checkReady(); updatePersScore();
+    };
     g.appendChild(b);
   });
 }
 
-function buildSubfields(relType){
-  const container=document.getElementById('subfields-container');
-  container.innerHTML='';
-  const defs=T[lang].sub[relType];
-  if(!defs)return;
-  const wrap=document.createElement('div');
-  wrap.className='subfields';
-  Object.entries(defs).forEach(([key,def])=>{
-    const group=document.createElement('div');
-    const lbl=document.createElement('span');
-    lbl.className='param-sublabel sans';
-    lbl.textContent=def.label;
+function buildSubfields(relType) {
+  var container = document.getElementById('subfields-container');
+  container.innerHTML = '';
+  var defs = T[lang].sub[relType];
+  if (!defs) return;
+  var wrap = document.createElement('div');
+  wrap.className = 'subfields';
+  Object.keys(defs).forEach(function(key) {
+    var def = defs[key];
+    var group = document.createElement('div');
+    var lbl = document.createElement('span');
+    lbl.className = 'param-sublabel sans';
+    lbl.textContent = def.label;
     group.appendChild(lbl);
-    if(def.type==='select'){
-      const grid=document.createElement('div');
-      grid.className='option-grid-3';
-      def.opts.forEach(opt=>{
-        const b=document.createElement('button');
-        b.className='option-btn small sans'+(subValues[key]===opt?' selected':'');
-        b.textContent=opt;
-        b.onclick=()=>{subValues[key]=opt;buildSubfields(relType);checkReady();updatePersScore();};
+    if (def.type === 'select') {
+      var grid = document.createElement('div');
+      grid.className = 'option-grid-3';
+      def.opts.forEach(function(opt) {
+        var b = document.createElement('button');
+        b.className = 'option-btn small sans' + (subValues[key] === opt ? ' selected' : '');
+        b.textContent = opt;
+        b.onclick = function() { subValues[key] = opt; buildSubfields(relType); checkReady(); updatePersScore(); };
         grid.appendChild(b);
       });
       group.appendChild(grid);
     } else {
-      const inp=document.createElement('input');
-      inp.type='text';inp.className='text-input sans';
-      inp.placeholder=def.ph||'';inp.value=subValues[key]||'';
-      inp.oninput=e=>{subValues[key]=e.target.value;checkReady();updatePersScore();};
+      var inp = document.createElement('input');
+      inp.type = 'text'; inp.className = 'text-input sans';
+      inp.placeholder = def.ph || ''; inp.value = subValues[key] || '';
+      inp.oninput = function(e) { subValues[key] = e.target.value; checkReady(); updatePersScore(); };
       group.appendChild(inp);
     }
     wrap.appendChild(group);
@@ -456,330 +494,311 @@ function buildSubfields(relType){
   container.appendChild(wrap);
 }
 
-function buildOtherGrids(){
-  const L=T[lang];
-  ['int','prez'].forEach(id=>{
-    const opts=id==='int'?L.int_opts:L.prez_opts;
-    const sel=id==='int'?selInt:selPrez;
-    const g=document.getElementById(id+'-grid');
-    g.innerHTML='';
-    opts.forEach(([v,label])=>{
-      const b=document.createElement('button');
-      b.className='option-btn sans'+(sel===v?' selected':'');
-      b.textContent=label;
-      b.onclick=()=>{if(id==='int')selInt=v;else selPrez=v;buildOtherGrids();checkReady();};
-      g.appendChild(b);
+function buildOtherGrids() {
+  var L = T[lang];
+  var ig = document.getElementById('int-grid');
+  if (ig) {
+    ig.innerHTML = '';
+    L.int_opts.forEach(function(item) {
+      var v = item[0], label = item[1];
+      var b = document.createElement('button');
+      b.className = 'option-btn sans' + (selInt === v ? ' selected' : '');
+      b.textContent = label;
+      b.onclick = function() { selInt = v; buildOtherGrids(); checkReady(); };
+      ig.appendChild(b);
     });
-  });
-  const ug=document.getElementById('used-grid');
-  ug.innerHTML='';
-  L.used_opts.forEach(([v,label])=>{
-    const b=document.createElement('button');
-    b.className='option-btn sans'+(selUsed===v?' selected':'');
-    b.textContent=label;
-    b.onclick=()=>{selUsed=v;document.getElementById('used-detail-wrap').style.display=v==='da'?'block':'none';if(v==='nu')document.getElementById('input-used-detail').value='';buildOtherGrids();checkReady();};
-    g.appendChild(b);
+  }
+  var pg = document.getElementById('prez-grid');
+  if (pg) {
+    pg.innerHTML = '';
+    L.prez_opts.forEach(function(item) {
+      var v = item[0], label = item[1];
+      var b = document.createElement('button');
+      b.className = 'option-btn sans' + (selPrez === v ? ' selected' : '');
+      b.textContent = label;
+      b.onclick = function() { selPrez = v; buildOtherGrids(); checkReady(); };
+      pg.appendChild(b);
+    });
+  }
+  var ug = document.getElementById('used-grid');
+  if (ug) {
+    ug.innerHTML = '';
+    L.used_opts.forEach(function(item) {
+      var v = item[0], label = item[1];
+      var b = document.createElement('button');
+      b.className = 'option-btn sans' + (selUsed === v ? ' selected' : '');
+      b.textContent = label;
+      b.onclick = function() {
+        selUsed = v;
+        var wrap = document.getElementById('used-detail-wrap');
+        if (wrap) wrap.style.display = v === 'da' ? 'block' : 'none';
+        var det = document.getElementById('input-used-detail');
+        if (v === 'nu' && det) det.value = '';
+        buildOtherGrids(); checkReady();
+      };
+      ug.appendChild(b);
+    });
+  }
+}
+
+function getRequiredSubKeys(relType) {
+  var defs = T[lang].sub[relType];
+  if (!defs) return [];
+  return Object.keys(defs).filter(function(k) {
+    return defs[k].label.indexOf('optional') === -1 && defs[k].label.indexOf('opțional') === -1 && defs[k].label.indexOf('optional') === -1;
   });
 }
 
-function getRequiredSubKeys(relType){
-  const defs=T[lang].sub[relType];
-  if(!defs)return[];
-  return Object.entries(defs).filter(([k,d])=>!d.label.includes('opțional')&&!d.label.includes('optional')).map(([k])=>k);
-}
-
-function checkReady(){
-  const prod=document.getElementById('input-produs').value.trim();
-  const usedOk=selUsed==='nu'||(selUsed==='da'&&document.getElementById('input-used-detail').value.trim());
-  let subOk=true;
-  if(selRel){const req=getRequiredSubKeys(selRel);subOk=req.every(k=>subValues[k]&&subValues[k].trim()!=='');}
-  document.getElementById('gen-btn').disabled=!(selAgentGen&&selClientGen&&selRel&&selInt&&selPrez&&prod&&selUsed&&usedOk&&subOk);
+function checkReady() {
+  var prod = document.getElementById('input-produs').value.trim();
+  var usedOk = selUsed === 'nu' || (selUsed === 'da' && document.getElementById('input-used-detail').value.trim());
+  var subOk = true;
+  if (selRel) {
+    var req = getRequiredSubKeys(selRel);
+    subOk = req.every(function(k) { return subValues[k] && subValues[k].trim() !== ''; });
+  }
+  document.getElementById('gen-btn').disabled = !(selAgentGen && selClientGen && selRel && selInt && selPrez && prod && selUsed && usedOk && subOk);
   updatePersScore();
 }
 
-function calcPersScore(){
-  if(!selRel)return 0;
-  const defs=T[lang].sub[selRel];
-  if(!defs)return 1;
-  const keys=Object.keys(defs);
-  const filled=keys.filter(k=>subValues[k]&&subValues[k].trim()!=='').length;
-  let score=1;
-  const ratio=filled/keys.length;
-  if(ratio>=0.25)score=2;
-  if(ratio>=0.5)score=3;
-  if(ratio>=0.75)score=4;
-  if(ratio>=1)score=5;
-  if(screenshotBase64&&score<5)score=Math.min(5,score+1);
+function calcPersScore() {
+  if (!selRel) return 0;
+  var defs = T[lang].sub[selRel];
+  if (!defs) return 1;
+  var keys = Object.keys(defs);
+  var filled = keys.filter(function(k) { return subValues[k] && subValues[k].trim() !== ''; }).length;
+  var score = 1;
+  var ratio = filled / keys.length;
+  if (ratio >= 0.25) score = 2;
+  if (ratio >= 0.5) score = 3;
+  if (ratio >= 0.75) score = 4;
+  if (ratio >= 1) score = 5;
+  if (screenshotBase64 && score < 5) score = Math.min(5, score + 1);
   return score;
 }
 
-function updatePersScore(){
-  if(!selRel){document.getElementById('pers-score-wrap').style.display='none';return;}
-  document.getElementById('pers-score-wrap').style.display='block';
-  document.getElementById('pers-label').textContent=T[lang].pers_label;
-  const score=calcPersScore();
-  for(let i=1;i<=5;i++){const dot=document.getElementById('pd'+i);if(dot)dot.className='pers-dot'+(i<=score?' active-'+score:'');}
-  const hints=T[lang].pers_hints||[];
-  const hintEl=document.getElementById('pers-hint');
-  if(hintEl)hintEl.textContent=score>0?(hints[score-1]||''):'';
+function updatePersScore() {
+  if (!selRel) { document.getElementById('pers-score-wrap').style.display = 'none'; return; }
+  document.getElementById('pers-score-wrap').style.display = 'block';
+  document.getElementById('pers-label').textContent = T[lang].pers_label;
+  var score = calcPersScore();
+  for (var i = 1; i <= 5; i++) {
+    var dot = document.getElementById('pd' + i);
+    if (dot) dot.className = 'pers-dot' + (i <= score ? ' active-' + score : '');
+  }
+  var hints = T[lang].pers_hints || [];
+  var hintEl = document.getElementById('pers-hint');
+  if (hintEl) hintEl.textContent = score > 0 ? (hints[score - 1] || '') : '';
 }
 
-function handleScreenshot(e){
-  const file=e.target.files[0];if(!file)return;
-  const reader=new FileReader();
-  reader.onload=ev=>{
-    screenshotBase64=ev.target.result.split(',')[1];
-    const preview=document.getElementById('screenshot-preview');
-    preview.src=ev.target.result;preview.style.display='block';
-    document.getElementById('upload-placeholder').style.display='none';
-    document.getElementById('remove-screenshot').style.display='inline-block';
-    document.getElementById('upload-hint').textContent=T[lang].upload_done;
+function handleScreenshot(e) {
+  var file = e.target.files[0]; if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(ev) {
+    screenshotBase64 = ev.target.result.split(',')[1];
+    var preview = document.getElementById('screenshot-preview');
+    preview.src = ev.target.result; preview.style.display = 'block';
+    document.getElementById('upload-placeholder').style.display = 'none';
+    document.getElementById('remove-screenshot').style.display = 'inline-block';
+    document.getElementById('upload-hint').textContent = T[lang].upload_done;
     updatePersScore();
   };
   reader.readAsDataURL(file);
 }
 
-function removeScreenshot(){
-  screenshotBase64=null;
-  document.getElementById('screenshot-input').value='';
-  document.getElementById('screenshot-preview').style.display='none';
-  document.getElementById('upload-placeholder').style.display='block';
-  document.getElementById('remove-screenshot').style.display='none';
-  document.getElementById('upload-hint').textContent=T[lang].upload_hint;
+function removeScreenshot() {
+  screenshotBase64 = null;
+  document.getElementById('screenshot-input').value = '';
+  document.getElementById('screenshot-preview').style.display = 'none';
+  document.getElementById('upload-placeholder').style.display = 'block';
+  document.getElementById('remove-screenshot').style.display = 'none';
+  document.getElementById('upload-hint').textContent = T[lang].upload_hint;
   updatePersScore();
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('input-produs').addEventListener('input',checkReady);
-  document.getElementById('input-used-detail').addEventListener('input',checkReady);
-  document.getElementById('obj-input').addEventListener('input',()=>{document.getElementById('obj-btn').disabled=!document.getElementById('obj-input').value.trim();});
-  applyLang();
-  buildOtherGrids();
-  buildGenderGrids();
-});
-
-function doLogin(){
-  const e=document.getElementById('login-email').value.trim();
-  const p=document.getElementById('login-pass').value.trim();
-  if(!e||!p)return;
-  document.getElementById('login-screen').style.display='none';
-  document.getElementById('app-screen').style.display='block';
-}
-
-function doLogout(){
-  document.getElementById('app-screen').style.display='none';
-  document.getElementById('login-screen').style.display='flex';
-  document.getElementById('script-output').style.display='none';
-  document.getElementById('obj-output').style.display='none';
-}
-
-function setTab(tab){
-  ['invitatie','preconectare','inchidere','followup'].forEach(t=>{
-    document.getElementById('panel-'+t).style.display=t===tab?'block':'none';
-    const tb=document.getElementById('tab-'+t);
-    if(!tb.classList.contains('locked'))tb.classList.toggle('active',t===tab);
+function setTab(tab) {
+  ['invitatie','preconectare','inchidere','followup'].forEach(function(t) {
+    document.getElementById('panel-' + t).style.display = t === tab ? 'block' : 'none';
+    var tb = document.getElementById('tab-' + t);
+    if (!tb.classList.contains('locked')) tb.classList.toggle('active', t === tab);
   });
 }
 
-function startLoader(msgId,msgs){
-  let i=0;document.getElementById(msgId).textContent=msgs[0];
-  loaderTimer=setInterval(()=>{i=(i+1)%msgs.length;document.getElementById(msgId).textContent=msgs[i];},1800);
+function startLoader(msgId, msgs) {
+  var i = 0;
+  document.getElementById(msgId).textContent = msgs[0];
+  loaderTimer = setInterval(function() { i = (i + 1) % msgs.length; document.getElementById(msgId).textContent = msgs[i]; }, 1800);
 }
-function stopLoader(){clearInterval(loaderTimer);}
+function stopLoader() { clearInterval(loaderTimer); }
 
-function getSystemPrompt(){
-  return `Expert in psychological MLM sales. Generate phone invitation scripts using ONLY advanced psychology — never classic sales or aggressive pitching.
-
-BLACKLIST — never use: "bă","chestie/chestia asta","oportunitate/opportunity","a face bani/make money","venit pasiv/passive income","incredibil/fantastic/extraordinar/amazing","trebuie să vezi","nu ai nimic de pierdut","tu ești primul","înainte de oricine","singurul", any empty superlative, double negatives, vague fillers.
-
-REPLACEMENTS: "opportunity"→"o direcție pe care o explorez"/"un avantaj verificat personal". "passive income"→"bani care vin când dormi". "make money"→"să schimbi ce intră lunar". Superlatives→specific sensory detail.
-
-LINGUISTIC PRINCIPLES: 1.Specificity>intensity 2.Sensory image>concept 3.Question>affirmation 4.Strategic negation>direct promise 5.Rareness through personal relevance — justify by character/values, NEVER by call order rank.
-
-ANTI-HALLUCINATION — CRITICAL: NEVER invent details not explicitly provided. No invented trips, photos, posts. If insufficient client data — skip Stage 2, go to Stage 3 with generic identity anchor. Use ONLY what agent explicitly wrote or is visible in uploaded screenshot.
-
-CALL ARCHITECTURE — 6 STAGES (6-8 min total):
-STAGE 1 — OPENING (0:00-0:30): Choose from 8 types. Never repeat same type twice.
-STAGE 2 — RAPPORT IN 3 STEPS (0:30-2:30): ONLY if real client data exists.
-  Step1: Sincere compliment from agent data only. "văd că ești genul de om care..." No superlatives.
-  Step2: Argued+justified with specific observable detail. Mirror neurons+serotonin.
-  Step3: ONE open question + COMPLETE SILENCE 3sec minimum. Client speaks MORE than agent. Agent only: "Înțeleg..."/"Are sens..."/"Exact..."
-STAGE 3 — IDENTITY ANCHOR (2:30-3:30): Built from client's Stage 2 response. Reactivate at premature refusal.
-STAGE 4 — NATURAL BRIDGE (3:30-4:30): Connect client's response to call reason. Social media: use what they said about agent's content. Never jump abruptly.
-STAGE 5 — INVITATION CORE (4:30-6:00): Skeptical Verifier/Curiosity Gap/Risk Reversal/Strategic Sincerity. No pitch. Neutral analyst tone.
-STAGE 6 — CLOSING (6:00-7:00): False dichotomy/NO-oriented Voss/emotional anchor. Always end with question.
-
-RHYTHM: Slow+warm(1-2) → Curious+energic(3-4) → Calm+firm(5-6)
-FLEXIBILITY: Skeleton fixed. Content always unique and creative from real data.
-
-8 OPENING TYPES: 1.VULNERABILITY("Mi-a fost teamă să te sun") 2.IDENTITY ANCHOR("Ești genul care verifică înainte să judece" — never call order) 3.CURIOSITY GAP("De 13 zile mă gândesc dacă să îți spun") 4.DRAMATIC NEWS 5.HUMOR INTERRUPT 6.SKEPTICAL VERIFIER(odd days 11/13/17, iPhone analogy, silence after) 7.CONFESSION 8.THIRD PARTY STORY
-
-VOSS NO-ORIENTED: Expected answer=NO. ONLY after client responds to pause. Examples: "Oare mai contează cum se numește sistemul?"/"Poți refuza ceva ce nu ai văzut?"
-
-GENDER: Calibrate tone only — never assume interests by gender. M→F: warm protective. F→M: vulnerability+energetic. Same: equality+solidarity.
-
-PAUSES: Vulnerability:2sec. Open question:3sec minimum. Analogy:2-3sec. Voss:complete silence.
-
-FORMAT — every exchange:
-### [Stage number and title]
-AGENT: [line]
-🧠 Psihologie: [trigger]
-🎙 Tonalitate: [delivery]
-⏸ Pauză: [where, seconds, why — if applicable]
-CLIENT: [response]
----
-Generate ONE complete script covering ALL 6 stages with 8-10 exchanges. Always respond in input language.`;
+function getSystemPrompt() {
+  return 'Expert in psychological MLM sales. Generate phone invitation scripts using ONLY advanced psychology.\n\nBLACKLIST: "ba","chestie","oportunitate/opportunity","a face bani/make money","venit pasiv/passive income","incredibil/fantastic/extraordinar/amazing","trebuie sa vezi","nu ai nimic de pierdut","tu esti primul","inainte de oricine","singurul", empty superlatives, double negatives.\n\nLINGUISTIC PRINCIPLES: 1.Specificity>intensity 2.Sensory image>concept 3.Question>affirmation 4.Strategic negation>direct promise 5.Rareness through personal relevance.\n\nANTI-HALLUCINATION: NEVER invent details not provided. If insufficient data - skip Stage 2, go to Stage 3.\n\nCALL ARCHITECTURE 6 STAGES (6-8 min):\nSTAGE 1 OPENING (0:00-0:30): Choose from 8 types. Never repeat.\nSTAGE 2 RAPPORT 3 STEPS (0:30-2:30): ONLY if real client data exists. Step1: sincere compliment from data. Step2: argued+justified. Step3: ONE open question + 3sec silence.\nSTAGE 3 IDENTITY ANCHOR (2:30-3:30): from client response.\nSTAGE 4 NATURAL BRIDGE (4:00-4:30): connect client response to call reason.\nSTAGE 5 INVITATION CORE (4:30-6:00): Skeptical Verifier/Curiosity Gap/Risk Reversal. No pitch.\nSTAGE 6 CLOSING (6:00-7:00): false dichotomy/Voss/emotional anchor. Always end with question.\n\n8 OPENINGS: 1.VULNERABILITY 2.IDENTITY ANCHOR (never call order) 3.CURIOSITY GAP 4.DRAMATIC NEWS 5.HUMOR 6.SKEPTICAL VERIFIER(odd days 11/13/17,iPhone analogy) 7.CONFESSION 8.THIRD PARTY STORY\n\nVOSS NO-ORIENTED: ONLY after client responds to pause.\nGENDER: calibrate tone only, never assume interests.\nPAUSES: vulnerability:2sec, open question:3sec, analogy:2-3sec, Voss:complete silence.\n\nFORMAT each exchange:\n### [Stage title]\nAGENT: [line]\n Psihologie: [trigger]\n Tonalitate: [delivery]\n Pauza: [if applicable]\nCLIENT: [response]\n---\nGenerate ONE complete script ALL 6 stages, 8-10 exchanges. Respond in input language.';
 }
 
-function buildContextString(){
-  const L=T[lang];const defs=L.sub[selRel];if(!defs)return'';
-  let lines=[];
-  Object.entries(defs).forEach(([key,def])=>{const val=subValues[key];if(val)lines.push(`  - ${def.label}: ${val}`);});
-  return lines.length?'\nClient context:\n'+lines.join('\n'):'';
+function buildContextString() {
+  var L = T[lang]; var defs = L.sub[selRel]; if (!defs) return '';
+  var lines = [];
+  Object.keys(defs).forEach(function(key) { var val = subValues[key]; if (val) lines.push('  - ' + defs[key].label + ': ' + val); });
+  return lines.length ? '\nClient context:\n' + lines.join('\n') : '';
 }
 
-async function callAPI(system, messages){
-  const res = await fetch(API_URL, {
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({system, messages, max_tokens:8000})
+function callAPI(system, messages, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', API_URL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      var data = JSON.parse(xhr.responseText);
+      var text = data.content ? data.content.map(function(b) { return b.text || ''; }).join('\n').trim() : '';
+      callback(null, text);
+    } else {
+      callback(new Error('HTTP ' + xhr.status), null);
+    }
+  };
+  xhr.onerror = function() { callback(new Error('Network error'), null); };
+  xhr.send(JSON.stringify({ system: system, messages: messages, max_tokens: 8000 }));
+}
+
+function generateScript() {
+  var prod = document.getElementById('input-produs').value.trim();
+  if (!selRel || !selInt || !prod || !selUsed || !selAgentGen || !selClientGen || !selPrez) return;
+  var L = T[lang];
+  var relLabel = ''; L.rel_opts.forEach(function(r) { if (r[0] === selRel) relLabel = r[1]; });
+  var intLabel = ''; L.int_opts.forEach(function(r) { if (r[0] === selInt) intLabel = r[1]; });
+  var prezLabel = ''; L.prez_opts.forEach(function(r) { if (r[0] === selPrez) prezLabel = r[1]; });
+  var agentGenLabel = ''; L.gen_opts.forEach(function(r) { if (r[0] === selAgentGen) agentGenLabel = r[1]; });
+  var clientGenLabel = ''; L.gen_opts.forEach(function(r) { if (r[0] === selClientGen) clientGenLabel = r[1]; });
+  var usedDetail = document.getElementById('input-used-detail').value.trim();
+  var contextStr = buildContextString();
+  var usedCtx = selUsed === 'da' && usedDetail ? '\n- Agent used product: YES. Experience: "' + usedDetail + '". Include personal testing micro-detail.' : '\n- Agent used product: NO.';
+
+  document.getElementById('script-output').style.display = 'none';
+  document.getElementById('obj-output').style.display = 'none';
+  document.getElementById('error-box').style.display = 'none';
+  document.getElementById('loader').style.display = 'block';
+  document.getElementById('gen-btn').disabled = true;
+  document.getElementById('gen-btn-text').dataset.loading = '1';
+  document.getElementById('gen-btn-text').textContent = L.gen_btn_loading;
+  startLoader('loader-msg', L.loader_msgs);
+
+  var userPrompt = 'Generate script:\n- Agent: ' + agentGenLabel + ' | Client: ' + clientGenLabel + '\n- Relationship: ' + relLabel + '\n- Product: ' + prod + '\n- Intention: ' + intLabel + '\n- Presentation: ' + prezLabel + '\n- Language: ' + (lang === 'ro' ? 'Romanian' : 'English') + usedCtx + contextStr;
+
+  var messages;
+  if (screenshotBase64) {
+    messages = [{role:"user",content:[{type:"image",source:{type:"base64",media_type:"image/jpeg",data:screenshotBase64}},{type:"text",text:"Analyze this social media profile and use it to personalize the script.\n\n" + userPrompt}]}];
+  } else {
+    messages = [{role:"user",content:userPrompt}];
+  }
+
+  callAPI(getSystemPrompt(), messages, function(err, text) {
+    stopLoader();
+    document.getElementById('loader').style.display = 'none';
+    if (err || !text) {
+      document.getElementById('error-box').textContent = L.error_msg;
+      document.getElementById('error-box').style.display = 'block';
+    } else {
+      renderScript('script-blocks', text, L);
+      document.getElementById('script-output').style.display = 'block';
+    }
+    document.getElementById('gen-btn').disabled = false;
+    delete document.getElementById('gen-btn-text').dataset.loading;
+    document.getElementById('gen-btn-text').textContent = L.gen_btn;
   });
-  if(!res.ok) throw new Error(`HTTP ${res.status}`);
-  const data = await res.json();
-  return data.content?.map(b=>b.text||'').join('\n').trim()||'';
 }
 
-async function generateScript(){
-  const prod=document.getElementById('input-produs').value.trim();
-  if(!selRel||!selInt||!prod||!selUsed||!selAgentGen||!selClientGen||!selPrez)return;
-  const L=T[lang];
-  const relLabel=L.rel_opts.find(r=>r[0]===selRel)?.[1]||selRel;
-  const intLabel=L.int_opts.find(r=>r[0]===selInt)?.[1]||selInt;
-  const prezLabel=L.prez_opts.find(r=>r[0]===selPrez)?.[1]||selPrez;
-  const agentGenLabel=L.gen_opts.find(r=>r[0]===selAgentGen)?.[1]||selAgentGen;
-  const clientGenLabel=L.gen_opts.find(r=>r[0]===selClientGen)?.[1]||selClientGen;
-  const usedDetail=document.getElementById('input-used-detail').value.trim();
-  const contextStr=buildContextString();
-  const usedCtx=selUsed==='da'&&usedDetail?`\n- Agent used product: YES. Experience: "${usedDetail}". Include personal testing micro-detail (odd number of days).`:'\n- Agent used product: NO. Do NOT include personal experience.';
-
-  document.getElementById('script-output').style.display='none';
-  document.getElementById('obj-output').style.display='none';
-  document.getElementById('error-box').style.display='none';
-  document.getElementById('loader').style.display='block';
-  document.getElementById('gen-btn').disabled=true;
-  document.getElementById('gen-btn-text').dataset.loading='1';
-  document.getElementById('gen-btn-text').textContent=L.gen_btn_loading;
-  startLoader('loader-msg',L.loader_msgs);
-
-  const userContent = screenshotBase64
-    ?[{type:"image",source:{type:"base64",media_type:"image/jpeg",data:screenshotBase64}},{type:"text",text:`Analyze this social media profile. Extract visible info and use it to personalize the script.\n\nScript parameters:\n- Agent: ${agentGenLabel} | Client: ${clientGenLabel}\n- Relationship: ${relLabel}\n- Product: ${prod}\n- Intention: ${intLabel}\n- Presentation: ${prezLabel}\n- Language: ${lang==='ro'?'Romanian':'English'}${usedCtx}${contextStr}`}]
-    :`Generate script:\n- Agent: ${agentGenLabel} | Client: ${clientGenLabel}\n- Relationship: ${relLabel}\n- Product: ${prod}\n- Intention: ${intLabel}\n- Presentation: ${prezLabel}\n- Language: ${lang==='ro'?'Romanian':'English'}${usedCtx}${contextStr}`;
-
-  try{
-    const text = await callAPI(getSystemPrompt(), [{role:"user",content:userContent}]);
-    if(!text)throw new Error('Empty');
+function generateObjection() {
+  var obj = document.getElementById('obj-input').value.trim();
+  if (!obj) return;
+  var prod = document.getElementById('input-produs').value.trim();
+  var L = T[lang];
+  document.getElementById('obj-output').style.display = 'none';
+  document.getElementById('obj-error').style.display = 'none';
+  document.getElementById('obj-loader').style.display = 'block';
+  document.getElementById('obj-btn').disabled = true;
+  startLoader('obj-loader-msg', L.obj_loader_msgs);
+  var sys = 'Expert in psychological MLM sales. Generate ONLY an objection handling script. Use Chris Voss NO-oriented questions, strategic sincerity, risk reversal. Format: AGENT/CLIENT with Psihologie, Tonalitate, Pauza. 4-6 exchanges. Respond in ' + (lang === 'ro' ? 'Romanian' : 'English') + '.';
+  callAPI(sys, [{role:"user",content:'Product: ' + prod + '\nObjection: "' + obj + '"\nGenerate objection script only.'}], function(err, text) {
     stopLoader();
-    document.getElementById('loader').style.display='none';
-    renderScript('script-blocks',text,L);
-    document.getElementById('script-output').style.display='block';
-  }catch(e){
-    stopLoader();
-    document.getElementById('loader').style.display='none';
-    document.getElementById('error-box').textContent=L.error_msg+' ('+e.message+')';
-    document.getElementById('error-box').style.display='block';
-  }
-  document.getElementById('gen-btn').disabled=false;
-  delete document.getElementById('gen-btn-text').dataset.loading;
-  document.getElementById('gen-btn-text').textContent=L.gen_btn;
+    document.getElementById('obj-loader').style.display = 'none';
+    if (err || !text) {
+      document.getElementById('obj-error').textContent = L.error_msg;
+      document.getElementById('obj-error').style.display = 'block';
+    } else {
+      renderScript('obj-blocks', text, L);
+      document.getElementById('obj-output').style.display = 'block';
+    }
+    document.getElementById('obj-btn').disabled = false;
+  });
 }
 
-async function generateObjection(){
-  const obj=document.getElementById('obj-input').value.trim();
-  if(!obj)return;
-  const prod=document.getElementById('input-produs').value.trim();
-  const L=T[lang];
-  document.getElementById('obj-output').style.display='none';
-  document.getElementById('obj-error').style.display='none';
-  document.getElementById('obj-loader').style.display='block';
-  document.getElementById('obj-btn').disabled=true;
-  startLoader('obj-loader-msg',L.obj_loader_msgs);
-  const sys=`Expert in psychological MLM sales. Generate ONLY an objection handling script. Use Chris Voss NO-oriented questions, strategic sincerity, risk reversal, emotional anchoring. Format: AGENT/CLIENT with 🧠 Psihologie, 🎙 Tonalitate, ⏸ Pauză. 4-6 exchanges max. Respond in ${lang==='ro'?'Romanian':'English'}.`;
-  try{
-    const text = await callAPI(sys,[{role:"user",content:`Product: ${prod}\nObjection: "${obj}"\nGenerate objection handling script only.`}]);
-    if(!text)throw new Error('Empty');
-    stopLoader();
-    document.getElementById('obj-loader').style.display='none';
-    renderScript('obj-blocks',text,L);
-    document.getElementById('obj-output').style.display='block';
-  }catch(e){
-    stopLoader();
-    document.getElementById('obj-loader').style.display='none';
-    document.getElementById('obj-error').textContent=L.error_msg;
-    document.getElementById('obj-error').style.display='block';
-  }
-  document.getElementById('obj-btn').disabled=false;
-}
-
-function renderScript(containerId,text,L){
-  const container=document.getElementById(containerId);
-  container.innerHTML='';
-  const lines=text.split('\n');
-  let blocks=[],cur=null;
-  for(let raw of lines){
-    const line=raw.trim();if(!line)continue;
-    if(/^###/.test(line)){if(cur)blocks.push(cur);cur={title:line.replace(/^###\s*/,''),items:[]};}
-    else if(/^(AGENT:|Agent:|MLM agent:|\*\*AGENT\*\*:)/i.test(line)){if(!cur)cur={title:'',items:[]};cur.items.push({r:'agent',t:line.replace(/^.*?:\s*/,'')});}
-    else if(/^(CLIENT:|Client:|\*\*CLIENT\*\*:)/i.test(line)){if(!cur)cur={title:'',items:[]};cur.items.push({r:'client',t:line.replace(/^.*?:\s*/,'')});}
-    else if(/^(🧠|Psihologie:|Psychology:)/i.test(line)){if(!cur)cur={title:'',items:[]};cur.items.push({r:'psi',t:line.replace(/^(🧠\s*\*?\*?(Psihologie|Psychology)\*?\*?:|🧠\s*)/i,'')});}
-    else if(/^(🎙|Tonalitate:|Tonality:)/i.test(line)){if(!cur)cur={title:'',items:[]};cur.items.push({r:'ton',t:line.replace(/^(🎙\s*\*?\*?(Tonalitate|Tonality)\*?\*?:|🎙\s*)/i,'')});}
-    else if(/^(⏸|Pauză:|Pauza:|Pause:)/i.test(line)){if(!cur)cur={title:'',items:[]};cur.items.push({r:'pau',t:line.replace(/^(⏸\s*\*?\*?(Pauză|Pauza|Pause)\*?\*?:|⏸\s*)/i,'')});}
-    else if(/^[-*]{3,}$/.test(line)){}
-    else{if(!cur)cur={title:'',items:[]};cur.items.push({r:'note',t:line.replace(/^\*+|\*+$/g,'')});}
-  }
-  if(cur)blocks.push(cur);
-  if(blocks.length===0){container.innerHTML=`<div class="script-block"><div class="script-block-body"><div class="line-text">${text}</div></div></div>`;return;}
-  let annId=0;
-  blocks.forEach(block=>{
-    const div=document.createElement('div');div.className='script-block';
-    if(block.title){const h=document.createElement('div');h.className='script-block-header';h.textContent=block.title;div.appendChild(h);}
-    const body=document.createElement('div');body.className='script-block-body';
-    let i=0;
-    while(i<block.items.length){
-      const item=block.items[i];
-      if(item.r==='agent'){
-        const anns=[];let j=i+1;
-        while(j<block.items.length&&['psi','ton','pau'].includes(block.items[j].r)){anns.push(block.items[j]);j++;}
-        const agentWrap=document.createElement('div');
-        agentWrap.innerHTML=`<div class="line-agent"><span class="badge badge-agent">${L.badge_agent}</span><span class="line-text">${item.t}</span></div>`;
-        if(anns.length>0){
-          const chipRow=document.createElement('div');chipRow.className='ann-toggle';
-          anns.forEach(ann=>{
-            const id='ann-'+(annId++);
-            const cc=ann.r==='psi'?'ann-chip-psi':ann.r==='ton'?'ann-chip-ton':'ann-chip-pau';
-            const pc=ann.r==='psi'?'ann-panel-psi':ann.r==='ton'?'ann-panel-ton':'ann-panel-pau';
-            const icon=ann.r==='psi'?'🧠':ann.r==='ton'?'🎙':'⏸';
-            const cl=ann.r==='psi'?L.psi_label:ann.r==='ton'?L.ton_label:L.pau_label;
-            const chip=document.createElement('button');
-            chip.className=`ann-chip ${cc}`;
-            chip.innerHTML=`${icon} <span>${cl.replace(/🧠 |🎙 |⏸ /,'')}</span>`;
-            chip.onclick=()=>{const p=document.getElementById(id);const o=p.classList.contains('open');p.classList.toggle('open',!o);chip.style.opacity=o?'1':'0.7';};
+function renderScript(containerId, text, L) {
+  var container = document.getElementById(containerId);
+  container.innerHTML = '';
+  var lines = text.split('\n');
+  var blocks = [], cur = null;
+  lines.forEach(function(raw) {
+    var line = raw.trim(); if (!line) return;
+    if (/^###/.test(line)) { if (cur) blocks.push(cur); cur = {title:line.replace(/^###\s*/,''),items:[]}; }
+    else if (/^(AGENT:|Agent:|\*\*AGENT\*\*:)/i.test(line)) { if (!cur) cur={title:'',items:[]}; cur.items.push({r:'agent',t:line.replace(/^.*?:\s*/,'')}); }
+    else if (/^(CLIENT:|Client:|\*\*CLIENT\*\*:)/i.test(line)) { if (!cur) cur={title:'',items:[]}; cur.items.push({r:'client',t:line.replace(/^.*?:\s*/,'')}); }
+    else if (/^(Psihologie:|Psychology:|🧠)/i.test(line)) { if (!cur) cur={title:'',items:[]}; cur.items.push({r:'psi',t:line.replace(/^(🧠\s*\*?\*?(Psihologie|Psychology)\*?\*?:|🧠\s*|Psihologie:\s*|Psychology:\s*)/i,'')}); }
+    else if (/^(Tonalitate:|Tonality:|🎙)/i.test(line)) { if (!cur) cur={title:'',items:[]}; cur.items.push({r:'ton',t:line.replace(/^(🎙\s*\*?\*?(Tonalitate|Tonality)\*?\*?:|🎙\s*|Tonalitate:\s*|Tonality:\s*)/i,'')}); }
+    else if (/^(Pauza:|Pause:|Pauza:|⏸)/i.test(line)) { if (!cur) cur={title:'',items:[]}; cur.items.push({r:'pau',t:line.replace(/^(⏸\s*\*?\*?(Pauza|Pause)\*?\*?:|⏸\s*|Pauza:\s*|Pause:\s*)/i,'')}); }
+    else if (/^[-*]{3,}$/.test(line)) {}
+    else { if (!cur) cur={title:'',items:[]}; cur.items.push({r:'note',t:line.replace(/^\*+|\*+$/g,'')}); }
+  });
+  if (cur) blocks.push(cur);
+  if (blocks.length === 0) { container.innerHTML = '<div class="script-block"><div class="script-block-body"><div class="line-text">' + text + '</div></div></div>'; return; }
+  blocks.forEach(function(block) {
+    var div = document.createElement('div'); div.className = 'script-block';
+    if (block.title) { var h = document.createElement('div'); h.className = 'script-block-header'; h.textContent = block.title; div.appendChild(h); }
+    var body = document.createElement('div'); body.className = 'script-block-body';
+    var i = 0;
+    while (i < block.items.length) {
+      var item = block.items[i];
+      if (item.r === 'agent') {
+        var anns = []; var j = i + 1;
+        while (j < block.items.length && ['psi','ton','pau'].indexOf(block.items[j].r) !== -1) { anns.push(block.items[j]); j++; }
+        var agentWrap = document.createElement('div');
+        agentWrap.innerHTML = '<div class="line-agent"><span class="badge badge-agent">' + L.badge_agent + '</span><span class="line-text">' + item.t + '</span></div>';
+        if (anns.length > 0) {
+          var chipRow = document.createElement('div'); chipRow.className = 'ann-toggle';
+          anns.forEach(function(ann) {
+            var id = 'ann-' + (annId++);
+            var cc = ann.r==='psi'?'ann-chip-psi':ann.r==='ton'?'ann-chip-ton':'ann-chip-pau';
+            var pc = ann.r==='psi'?'ann-panel-psi':ann.r==='ton'?'ann-panel-ton':'ann-panel-pau';
+            var icon = ann.r==='psi'?'🧠':ann.r==='ton'?'🎙':'⏸';
+            var cl = ann.r==='psi'?L.psi_label:ann.r==='ton'?L.ton_label:L.pau_label;
+            var chip = document.createElement('button');
+            chip.className = 'ann-chip ' + cc;
+            chip.innerHTML = icon + ' <span>' + cl + '</span>';
+            chip.onclick = (function(pid, c) { return function() { var p = document.getElementById(pid); var o = p.classList.contains('open'); p.classList.toggle('open',!o); c.style.opacity = o?'1':'0.7'; }; })(id, chip);
             chipRow.appendChild(chip);
-            const panel=document.createElement('div');panel.id=id;panel.className=`ann-panel ${pc}`;
-            panel.innerHTML=`<div class="ann-panel-text">${ann.t}</div>`;
+            var panel = document.createElement('div'); panel.id = id; panel.className = 'ann-panel ' + pc;
+            panel.innerHTML = '<div class="ann-panel-text">' + ann.t + '</div>';
             chipRow.appendChild(panel);
           });
           agentWrap.appendChild(chipRow);
         }
-        body.appendChild(agentWrap);i=j;
-      } else if(item.r==='client'){
-        body.innerHTML+=`<div class="line-client"><span class="badge badge-client">${L.badge_client}</span><span class="line-text-client">${item.t}</span></div>`;i++;
-      } else if(item.r==='note'){
-        body.innerHTML+=`<div class="note-line">${item.t}</div>`;i++;
-      } else {i++;}
+        body.appendChild(agentWrap); i = j;
+      } else if (item.r === 'client') {
+        body.innerHTML += '<div class="line-client"><span class="badge badge-client">' + L.badge_client + '</span><span class="line-text-client">' + item.t + '</span></div>'; i++;
+      } else if (item.r === 'note') {
+        body.innerHTML += '<div class="note-line">' + item.t + '</div>'; i++;
+      } else { i++; }
     }
-    div.appendChild(body);container.appendChild(div);
+    div.appendChild(body); container.appendChild(div);
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('input-produs').addEventListener('input', checkReady);
+  document.getElementById('input-used-detail').addEventListener('input', checkReady);
+  document.getElementById('obj-input').addEventListener('input', function() {
+    document.getElementById('obj-btn').disabled = !document.getElementById('obj-input').value.trim();
+  });
+  applyLang();
+});
 </script>
 </body>
 </html>
