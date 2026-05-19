@@ -1,4 +1,5 @@
 
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -22,7 +23,8 @@ app.post('/api/generate', async (req, res) => {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-haiku-4-5-20251001',
+        
         max_tokens: max_tokens || 8000,
         system,
         messages
